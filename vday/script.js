@@ -11,8 +11,8 @@ const tontonGifs = [
 
 const title = document.querySelector(".title");
 const btnContainer = document.querySelector(".buttons");
-const yesBtn = document.querySelector(".btn-da");
-const noBtn = document.querySelector(".btn-nu");
+const yesBtn = document.querySelector(".btn-yes");
+const noBtn = document.querySelector(".btn-no");
 const img = document.querySelector(".img");
 
 const MAX_IMAGES = 5;
@@ -22,9 +22,9 @@ let noButtonSize = 1;
 let yesButtonSize = 1;
 
 yesBtn.addEventListener("click", () => {
-  title.innerHTML = "Yay! Știam eu!! 💗";
+  title.innerHTML = "Yay! I Love u!! 💗";
   btnContainer.classList.add("hidden");
-  changeImage("da");
+  changeImage("yes");
 });
 
 noBtn.addEventListener("click", () => {
@@ -51,12 +51,12 @@ function shrinkNoButton() {
 
 function generateMessage(noCount) {
   const messages = [
-    "Nu 😔",
-    "Ești sigur? 🥺",
-    "Daarr te rog 🥹",
-    "Nu-i corect 😭",
-    "Suntem certați oficial 💔",
-    "O să plang... 😭💔",
+    "No 😔",
+    "Are you sure? 🥺",
+    "Oh please 🥹",
+    " Don't do this to me 😭",
+    "You're breaking my heart 💔",
+    "I'm gonna cry... 😭💔",
   ];
   return messages[Math.min(noCount, messages.length - 1)];
 }
@@ -71,3 +71,4 @@ function changeImage(image) {
 function updateNoButtonText() {
   noBtn.innerHTML = generateMessage(noCount);
 }
+
